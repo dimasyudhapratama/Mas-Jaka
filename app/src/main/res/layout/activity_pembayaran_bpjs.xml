@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.erait.mas_jaka.PembayaranBPJSActivity"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_vertical_margin">
+
+    <!-- Poin -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Poin Kamu"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+            android:textColor="@color/colorBlack"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/dashboard_point_masyarakat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100 Point"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+            android:textColor="@color/colorBlack"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Masukkan No. BPJS"
+        android:textColor="@color/colorBlack"/>
+    <EditText
+        android:id="@+id/input_no_bpjs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F5F5F5">
+            <TableRow>
+                <TextView
+                    android:text="Nomor Peserta"
+                    android:textColor="@color/colorBlack"
+                    android:paddingRight="8dp"/>
+                <TextView
+                    android:text=":"
+                    android:textColor="@color/colorBlack"
+                    android:paddingRight="8dp"/>
+                <TextView
+                    android:text="08233920"
+                    android:textColor="@color/colorBlack"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:text="Periode"
+                    android:textColor="@color/colorBlack"/>
+                <TextView
+                    android:text=":"
+                    android:textColor="@color/colorBlack" />
+                <TextView
+                    android:text="Oktober 2019"
+                    android:textColor="@color/colorBlack"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:text="Jumlah"
+                    android:textColor="@color/colorBlack"/>
+                <TextView
+                    android:text=":"
+                    android:textColor="@color/colorBlack" />
+                <TextView
+                    android:text="Rp. 50.000 (500 Points)"
+                    android:textColor="@color/colorBlack"/>
+            </TableRow>
+        </TableLayout>
+    <Button
+        android:id="@+id/proses_bayar_bpjs"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Proses"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/green_button"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center_horizontal"/>
+
+</LinearLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cardview_notifikasi"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/coin"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/rv_notifikasi_tipe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Point Masuk"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/rv_notifikasi_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10 Agustus 2019"
+                    android:textColor="@color/colorBlack"
+                    android:paddingRight="8dp"/>
+                <TextView
+                    android:id="@+id/rv_notifikasi_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="19:10"
+                    android:textColor="@color/colorBlack"/>
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/rv_notifikasi_point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100 Point"
+                android:textColor="@color/colorGreen"
+                />
+        </LinearLayout>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/centang"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

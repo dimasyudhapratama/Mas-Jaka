@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_vertical_margin">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/user_1"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="USR0001"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/colorBlack"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Profil"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama Lengkap"
+        android:textColor="@color/colorBlack"/>
+    <TextView
+        android:id="@+id/akun_nama_lengkap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dimas Yudha Pratama"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textColor="@color/colorBlack"
+        android:layout_marginTop="8dp"/>
+    <TextView
+        android:id="@+id/akun_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="dyp.dimasyp@gmail.com"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tanggal Lahir"
+        android:textColor="@color/colorBlack"
+        android:layout_marginTop="8dp"/>
+    <TextView
+        android:id="@+id/akun_tgl_lahir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="dyp.dimasyp@gmail.com"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jenis Kelamin"
+        android:textColor="@color/colorBlack"
+        android:layout_marginTop="8dp"/>
+    <TextView
+        android:id="@+id/akun_jk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Laki-Laki"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No. Telepon"
+        android:textColor="@color/colorBlack"
+        android:layout_marginTop="8dp"/>
+    <TextView
+        android:id="@+id/no_telp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="082XXXXXXXXX"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alamat"
+        android:textColor="@color/colorBlack"
+        android:layout_marginTop="8dp"/>
+    <TextView
+        android:id="@+id/akun_alamat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jl. Mastrip 4 Jember"/>
+
+</LinearLayout>

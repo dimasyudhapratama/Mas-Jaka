@@ -3,15 +3,19 @@ package com.erait.mas_jaka;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
+import com.erait.mas_jaka.Fragment.FragmentAkun;
 import com.erait.mas_jaka.Fragment.FragmentDashboardMasyarakat;
+import com.erait.mas_jaka.Fragment.FragmentNotifikasi;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private TextView mTextMessage;
@@ -34,30 +38,32 @@ public class MainActivity extends AppCompatActivity {
         navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                Fragment fragment = null;
-                switch (menuItem.getItemId()) {
-                    case R.id.navigation_home:
-                         fragment = new FragmentDashboardMasyarakat();
-                    case R.id.navigation_notifications:
-                        fragment = new FragmentDashboardMasyarakat();
-                    case R.id.navigation_account:
-                        fragment = new FragmentDashboardMasyarakat();
+                if(menuItem.getItemId() == R.id.navigation_home){
+                    getFragmentPage(new FragmentDashboardMasyarakat());
+                }else if(menuItem.getItemId() == R.id.navigation_notifications) {
+                    getFragmentPage(new FragmentNotifikasi());
+                }else  if(menuItem.getItemId() == R.id.navigation_account){
+                    getFragmentPage(new FragmentAkun());
                 }
-                return getFragmentPage(fragment);
+                return true;
             }
         });
     }
 
     //Menampilkan halaman Fragment
-    private boolean getFragmentPage(Fragment fragment){
-        if (fragment != null){
-            getSupportFragmentManager()
-                    .beginTransaction()
-                    .replace(R.id.page_container, fragment)
-                    .commit();
-            return true;
-        }
-        return false;
+    private void getFragmentPage(Fragment fragment){
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.page_container,fragment);
+        ft.commit();
+
+//        if (fragment != null){
+//            getSupportFragmentManager()
+//                    .beginTransaction()
+//                    .replace(R.id.page_container, fragment)
+//                    .commit();
+//            return true;
+//        }
+//        return false;
     }
 
 }

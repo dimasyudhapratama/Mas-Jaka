@@ -1,4 +1,4 @@
-package com.erait.mas_jaka;
+package com.erait.mas_jaka.Library;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

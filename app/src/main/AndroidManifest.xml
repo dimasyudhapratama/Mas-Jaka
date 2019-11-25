@@ -10,6 +10,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".DetailEventActivity"></activity>
+        <activity android:name=".EventCampaignActivity" />
+        <activity android:name=".DetailNotifikasiActivity" />
+        <activity android:name=".InputJumlahSampahActivity" />
+        <activity android:name=".PembayaranBPJSActivity" />
+        <activity android:name=".PeringkatActivity" />
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main">
@@ -19,14 +25,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Test"></activity>
+        <activity android:name=".Test" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".RegisterUKM" />
         <activity android:name=".RegisterMasyarakat" />
         <activity android:name=".RegisterOptionActivity" />
-        <activity android:name=".SplashScreenActivity">
-
-        </activity>
+        <activity android:name=".SplashScreenActivity" />
     </application>
 
 </manifest>

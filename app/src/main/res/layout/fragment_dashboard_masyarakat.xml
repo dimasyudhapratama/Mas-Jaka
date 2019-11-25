@@ -1,96 +1,178 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="@dimen/activity_horizontal_margin">
-    <!-- Poin -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/activity_vertical_margin">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_horizontal_margin">
+
+        <!-- Poin -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Poin Kamu"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+                android:textColor="@color/colorBlack"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <TextView
+                android:id="@+id/dashboard_point_masyarakat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100 Point"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+                android:textColor="@color/colorBlack"/>
+        </LinearLayout>
+        <!-- Menu -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_green_background"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/activity_vertical_margin">
+            <LinearLayout
+                android:id="@+id/main_option_peringkat_ms"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:background="@drawable/peringkat"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="Peringkatmu"
+                    android:textColor="@color/colorBlack"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/main_option_bayar_bpjs_ms"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:background="@drawable/bpjs_logo"
+                    android:layout_width="80dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="10dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="Pembayaran BPJS"
+                    android:textColor="@color/colorBlack"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/main_option_lapak_ms"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:background="@drawable/cart_png"
+                    android:layout_width="80dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="10dp"/>
+                <TextView
+                    android:id="@+id/text_di_menu_lapak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="Beli Barang"
+                    android:textColor="@color/colorBlack"/>
+            </LinearLayout>
+        </LinearLayout>
+        <!-- Proggress Mu -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Poin Kamu"
+            android:text="Perkembanganmu"
             android:textStyle="bold"
-            android:textAppearance="@style/TextAppearance.AppCompat.Inverse"
             android:textColor="@color/colorBlack"/>
-        <View
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="1"/>
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:progress="50"
+            android:max="100"/>
         <TextView
-            android:id="@+id/dashboard_point_masyarakat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="100 Point"
+            android:text="200/1000 XP"
+            android:layout_gravity="right"
             android:textColor="@color/colorBlack"/>
+        <!-- Event -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Event"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            android:layout_marginBottom="8dp"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@drawable/festival_batik_ngalam"
+            android:layout_marginBottom="8dp"/>
+        <TextView
+            android:id="@+id/dashboard_masyarakat_more_event"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lihat_event"
+            android:layout_gravity="right"
+            android:textColor="@color/colorGreen"/>
+        <!-- Produk Populer -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kerajinan Populer"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            android:layout_marginBottom="8dp"/>
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </HorizontalScrollView>
+        <!-- Lapak -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lapak UKM"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack"
+            android:layout_marginBottom="8dp"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_ukm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2"></androidx.recyclerview.widget.RecyclerView>
     </LinearLayout>
-    <!-- Menu -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/card_green_background">
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center_horizontal">
-            
-            <ImageView
-                android:background="@drawable/peringkat"
-                android:layout_width="80dp"
-                android:layout_height="80dp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                android:text="Peringkatmu"
-                android:textColor="@color/colorBlack"/>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center_horizontal">
-
-            <ImageView
-                android:background="@drawable/bpjs_logo"
-                android:layout_width="80dp"
-                android:layout_height="70dp"
-                android:layout_marginTop="10dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                android:text="Pembayaran BPJS"
-                android:textColor="@color/colorBlack"/>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center_horizontal">
-
-            <ImageView
-                android:background="@drawable/cart_png"
-                android:layout_width="80dp"
-                android:layout_height="70dp"
-                android:layout_marginTop="10dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
-                android:text="Beli Barang"
-                android:textColor="@color/colorBlack"/>
-        </LinearLayout>
-    </LinearLayout>
-</LinearLayout>
+</ScrollView>
