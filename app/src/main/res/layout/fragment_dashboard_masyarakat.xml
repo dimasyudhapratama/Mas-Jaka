@@ -155,11 +155,11 @@
             android:textStyle="bold"
             android:textColor="@color/colorBlack"
             android:layout_marginBottom="8dp"/>
-        <HorizontalScrollView
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_kerajinan_masyarakat"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-        </HorizontalScrollView>
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"></androidx.recyclerview.widget.RecyclerView>
         <!-- Lapak -->
         <TextView
             android:layout_width="wrap_content"
@@ -172,7 +172,9 @@
             android:id="@+id/rv_ukm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-            app:spanCount="2"></androidx.recyclerview.widget.RecyclerView>
+            android:paddingLeft="8dp"
+            ></androidx.recyclerview.widget.RecyclerView>
     </LinearLayout>
 </ScrollView>
+
+    <!-- app:layoutManager="androidx.recyclerview.widget.GridLayoutManager" app:spanCount="2" -->

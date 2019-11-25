@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import com.erait.mas_jaka.Fragment.FragmentAkun;
 import com.erait.mas_jaka.Fragment.FragmentDashboardMasyarakat;
+import com.erait.mas_jaka.Fragment.FragmentDashboardUKM;
 import com.erait.mas_jaka.Fragment.FragmentNotifikasi;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -33,7 +34,8 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView navView = findViewById(R.id.nav_view);
         mTextMessage = findViewById(R.id.message);
 
-        getFragmentPage(new FragmentDashboardMasyarakat());
+//        getFragmentPage(new FragmentDashboardMasyarakat());
+        getFragmentPage(new FragmentDashboardUKM());
 
         navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -55,15 +57,6 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.page_container,fragment);
         ft.commit();
-
-//        if (fragment != null){
-//            getSupportFragmentManager()
-//                    .beginTransaction()
-//                    .replace(R.id.page_container, fragment)
-//                    .commit();
-//            return true;
-//        }
-//        return false;
     }
 
 }

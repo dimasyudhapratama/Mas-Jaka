@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:gravity="center_horizontal"
-    android:layout_marginBottom="8dp">
-    <ImageView
-        android:id="@+id/grid_logo_ukm"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="@drawable/whatsapp"/>
-    <TextView
-        android:id="@+id/grid_nama_ukm"
+    android:layout_marginRight="8dp">
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nama UKM"
-        android:textColor="@color/colorBlack"/>
-</LinearLayout>
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="8dp">
+        <ImageView
+            android:id="@+id/grid_logo_ukm"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/whatsapp"/>
+        <TextView
+            android:id="@+id/grid_nama_ukm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama UKM"
+            android:textColor="@color/colorBlack"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

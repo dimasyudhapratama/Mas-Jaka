@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.erait.mas_jaka.Model.LapakUkmModel;
 import com.erait.mas_jaka.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -34,7 +35,9 @@ public class LapakUKMGridAdapter extends RecyclerView.Adapter<LapakUKMGridAdapte
     @Override
     public void onBindViewHolder(@NonNull GridUKMViewHolder holder, int position) {
         LapakUkmModel lapak = lapakUkmModelArrayList.get(position);
-//        holder.grid_nama_ukm.setText(lapak.getNama_ukm());
+
+        Picasso.get().load(lapak.getImage()).into(holder.grid_logo_ukm);
+        holder.grid_nama_ukm.setText(lapak.getNama_ukm());
     }
 
     @Override
