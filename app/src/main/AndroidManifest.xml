@@ -10,9 +10,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ListDaganganActivity">
-
-        </activity>
+        <activity android:name=".InputDaganganActivity"></activity>
+        <activity android:name=".TestUploadImage"></activity>
+        <activity android:name=".ListDaganganActivity" />
         <activity android:name=".DetailEventActivity" />
         <activity android:name=".EventCampaignActivity" />
         <activity android:name=".DetailNotifikasiActivity" />

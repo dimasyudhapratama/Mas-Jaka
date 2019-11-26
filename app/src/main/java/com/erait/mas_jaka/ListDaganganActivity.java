@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
@@ -59,7 +60,8 @@ public class ListDaganganActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if(item.getItemId() == R.id.list_dagangan_add){
-            Toast.makeText(this, "Add Dagangan Coming Soon", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(ListDaganganActivity.this, InputDaganganActivity.class);
+            startActivity(intent);
         }
         return true;
     }
